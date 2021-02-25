@@ -1,0 +1,19 @@
+﻿@model Projekt_Dejtingsida.Models.RequestSent
+@{
+    ViewBag.Title = "RequestList";
+}
+<!-- Visar ett meddelande på hur det gått med vänförfrågan. -->
+@if (Model.Success)
+{
+    <div class="alert alert-success" role="alert">
+        Friend request added.
+    </div>
+}
+else
+{
+    <!-- Visar ett felmeddelande beroende på hur det gått. -->
+    <div class="alert alert-danger" role="alert">
+        @Model.Error
+    </div>
+}
+@Html.ActionLink("» Profile", "Index", "Friend", null)

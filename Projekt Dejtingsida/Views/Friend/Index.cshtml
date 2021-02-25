@@ -1,0 +1,18 @@
+﻿@model Projekt_Dejtingsida.Models.PendingRequests
+@{
+    ViewBag.Title = "Contacts";
+}
+<!-- Vår startmeny för kontakter. 
+    För att visa förfrågningar och kontaktlista -->
+<h2>Contact settings </h2>
+<ul class="nav">
+    <li class="nav-item">
+        @Html.ActionLink("» Friendlist", "FriendList", "Friend", null)
+    </li>
+    <li class="nav-item">
+        @Html.ActionLink("» Outgoing (" + @Model.Outgoing + ")", "OutgoingList", "Friend", null)
+    </li>
+    <li class="nav-item">
+        @Html.ActionLink("» Incomming (" + @Model.Incomming + ")", "IncommingList", "Friend", null)
+    </li>
+</ul>
